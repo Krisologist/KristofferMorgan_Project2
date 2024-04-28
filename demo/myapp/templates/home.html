@@ -1,0 +1,45 @@
+{% extends "base.html" %}    {% block title %} Home Page {% endblock %}
+{% block content %}
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <div class="container">
+        <p>This website will help you manage what you need to do</p>
+        <p>Go to the admin page and login to set up your schedule</p>
+        <p> Once your activities are set up, press the button below to go to your activities. </p>
+        <a href="{% url 'todos' %}">Activities</a>
+    </div>
+</body>
+</html>
+{% endblock %}
