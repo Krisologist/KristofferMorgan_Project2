@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'kristofferm/demo-web' // Replace with your Docker image name
+        DOCKER_IMAGE = 'kristofferm/demo-web'
         DOCKER_TAG = 'latest' // Specify the Docker image tag
     }
 
@@ -37,7 +37,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Deploy the application on Tomcat running in Docker containers
+                // Deploy the application running in Docker containers
                 sh 'docker-compose up -d'
             }
         }
